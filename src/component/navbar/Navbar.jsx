@@ -36,7 +36,7 @@ const Navbar = () => {
           </Menu.ItemGroup>
           <Menu.ItemGroup title="Item 2">
             <Menu.Item key="setting:3">Option 3</Menu.Item>
-            <Menu.Item key="setting:4">Option 4</Menu.Item>
+            <Menu.Item key="setting:4"><NavLink to="ssladd">SSL</NavLink></Menu.Item>
           </Menu.ItemGroup>
            </SubMenu>
       
