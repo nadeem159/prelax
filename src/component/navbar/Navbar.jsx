@@ -7,19 +7,21 @@ import {SettingOutlined } from '@ant-design/icons'
 const Navbar = () => {
     const {SubMenu} = Menu
     return (
-   <Menu mode='horizontal'>
+   <Menu mode='horizontal' >
        <Menu.Item>
          <NavLink to="/"> LOGO</NavLink> 
        </Menu.Item>
-      
            <Menu.Item>
-           <NavLink to="/"> Home</NavLink> 
+           <NavLink to="/" > Home</NavLink> 
            </Menu.Item>
            <Menu.Item>
            <NavLink to="/cloud"> Cloud</NavLink> 
            </Menu.Item>
            <Menu.Item>
            <NavLink to="/cloudserver"> Cloud Server</NavLink> 
+           </Menu.Item>
+           <Menu.Item>
+           <NavLink to="/databaseviewer"> DB</NavLink> 
            </Menu.Item>
            <Menu.Item>
            <NavLink to="/cloudpayment"> Cloud Payment</NavLink> 
@@ -32,7 +34,7 @@ const Navbar = () => {
             <Menu.Item >
             <NavLink to='cloudaccountadd'>Add Cloud Account Details</NavLink>
             </Menu.Item>
-            <Menu.Item >Option 2</Menu.Item>
+            <Menu.Item><NavLink to='databasecontroler'></NavLink>Add DataBase</Menu.Item>
           </Menu.ItemGroup>
           <Menu.ItemGroup title="Item 2">
             <Menu.Item key="setting:3">Option 3</Menu.Item>

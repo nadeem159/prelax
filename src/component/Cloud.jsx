@@ -44,7 +44,7 @@ loadData()
           <th>{val.cloudsecret}</th>
           <th>
             <Link to ="" className='btn btn-info me-2'>View</Link>
-            <Link to={`/cloud/edit/${val.id}`} className='btn btn-warning me-2' >Edit</Link>
+            <Link to={`/cloud/ssl/edit/${val.id}`} className='btn btn-warning me-2' >Edit</Link>
             <Link to="" className='btn btn-danger' onClick={()=>deleteData(val.id)}>Delete</Link>
           </th>
         </tr>

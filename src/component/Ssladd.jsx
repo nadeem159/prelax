@@ -24,7 +24,7 @@ setSsl((preValue)=>{
 
     const submitssl = async(e) => {
         e.preventDefault()
-       const resultssl = await axios.post("http://localhost:3001/ssl",ssl)
+       const resultssl = await axios.post("http://localhost:3001/ssl",ssl).then((resultssl)=>{setSsl(resultssl.data)}).then(()=>{navigate("/ssl")}).catch((err)=>{alert(err)})
     //    setSsl(resultssl.data)
         console.loge(resultssl)
     }
