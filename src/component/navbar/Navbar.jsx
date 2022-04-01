@@ -8,7 +8,7 @@ const Navbar = () => {
   const {SubMenu} = Menu
   return (
 <div className='bg bg-black '>
-     <Menu mode='horizontal' className='bg text-white bg-dark color'>
+     <Menu mode='horizontal' className='bg text-white bg-dark color d-flex justify-content-center align-items-center' style={{height:"75px"}}>
          <Menu.Item>
            <NavLink to="/"> <img src='images/left-logo.png' alt='logo' style={{height:"20px"}} /></NavLink> 
          </Menu.Item>
