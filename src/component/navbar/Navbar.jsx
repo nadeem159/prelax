@@ -4,11 +4,10 @@ import 'antd/dist/antd.less'
 import { Col, Menu, Row } from 'antd'
 import { NavLink } from 'react-router-dom'
 import { SettingOutlined,HomeFilled ,CloudOutlined,CloudServerOutlined,DatabaseOutlined,BankOutlined} from '@ant-design/icons'
-import styled from 'styled-components'
 const Navbar = () => {
   const {SubMenu} = Menu
   return (
-<maindiv className='bg bg-black '>
+<div className='bg bg-black '>
      <Menu mode='horizontal' className='bg text-white bg-dark color'>
          <Menu.Item>
            <NavLink to="/"> <img src='images/left-logo.png' alt='logo' style={{height:"20px"}} /></NavLink> 
@@ -50,11 +49,8 @@ const Navbar = () => {
              </SubMenu>
      </Menu>
 
-</maindiv>
+</div>
   )
 }
 
 export default Navbar
-const maindiv = styled.div`
-
-`

@@ -19,7 +19,7 @@ const App = () => {
     <Routes>
     <Route path='/' element={<Home/>}/>
     <Route path='/cloud/' element={<Cloud/>}/>
-    {/* <Route path='/cloud/:id' element={<Cloud/>}/> */}
+    <Route path='/cloud/:id' element={<Cloud/>}/>
     <Route path='/cloudaccountadd' element={<CloudAccountAdd/>}/>
     <Route path='/cloud/ssl/edit/:id' element={<CloudAccountEdit/>}/>
     <Route path='/databasecontroler' element={<DataBaseControler/>}/>
