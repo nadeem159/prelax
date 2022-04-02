@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Routes , Route} from 'react-router-dom'
 import Navbar from './component/navbar/Navbar'
 import Home from './component/Home'
@@ -13,7 +13,10 @@ import SSL from './component/SSL'
 import  Ssladd  from './component/Ssladd'
 import Reduxget from './component/Reduxget'
 import './App.css'
+import Login from './component/login/Login'
+
 const App = () => {
+
   return (
     <div>
     <Navbar/>
@@ -21,6 +24,7 @@ const App = () => {
     <Route path='/' element={<Home/>}/>
     <Route path='/cloud/' element={<Cloud/>}/>
     <Route path='/cloud/:id' element={<Cloud/>}/>
+    <Route path='/login' element={<Login/>}/>
     <Route path='/cloudaccountadd' element={<CloudAccountAdd/>}/>
     <Route path='/cloud/ssl/edit/:id' element={<CloudAccountEdit/>}/>
     <Route path='/databasecontroler' element={<DataBaseControler/>}/>
