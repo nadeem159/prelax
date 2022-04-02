@@ -4,13 +4,13 @@ import {Ssldemo} from "../controller/Ssldemo"
 const sslData = createSlice({
     name:"sslslice",
     initialState:{
-        users:[],
+        userss:[],
         loader:false,
         error:{},
     },
     reducers:{
         getssldata:(state,action)=>{
-            state.users =[...state.users,action.payload]
+            state.userss =[...state.userss,action.payload]
         }
     },
     extraReducers:{
@@ -19,7 +19,7 @@ const sslData = createSlice({
         },
         [Ssldemo.fulfilled]:(state,action)=>{
             state.loader = false;
-            state.users  = action.payload
+            state.userss  = action.payload
         },
         [Ssldemo.rejected]:(state,action)=>{
             state.loader = false;

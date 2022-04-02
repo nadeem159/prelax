@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import {Ssldemo} from "../controller/Ssldemo"
 const Reduxget = () => {
     const dispatch = useDispatch()
-     const {loader,users} = useSelector(state => state.users)
+     const {loader,userss} = useSelector(state => state.userss)
     useEffect(()=>{
         dispatch(Ssldemo())
     },[])
@@ -22,7 +22,7 @@ const Reduxget = () => {
       </tr>
     </thead>
     <tbody>
-      {users.map((user,index)=>(
+      {userss.map((user,index)=>(
           <tr>
           <th>{index + 1}</th>
           <th>{user.ssltype}</th>

@@ -43,7 +43,7 @@ const Navbar = () => {
               <Menu.Item><NavLink to='databasecontroler' style={{color: 'white', textDecoration: 'none'}}>Add DataBase</NavLink></Menu.Item>
             </Menu.ItemGroup>
             <Menu.ItemGroup title="Item 2" className='bg bg-dark text-white'>
-              <Menu.Item key="setting:3"><NavLink to="reduxget">Redux</NavLink></Menu.Item>
+              <Menu.Item key="setting:3"><NavLink to="reduxget" style={{color: 'white', textDecoration: 'none'}}>Redux</NavLink></Menu.Item>
               <Menu.Item key="setting:4"><NavLink to="ssladd" style={{color: 'white', textDecoration: 'none'}}>SSL</NavLink></Menu.Item>
             </Menu.ItemGroup>
              </SubMenu>
