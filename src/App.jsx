@@ -11,6 +11,7 @@ import DataBaseControler from './component/DataBaseControler'
 import DataBaseViewer from './component/DataBaseViewer'
 import SSL from './component/SSL'
 import  Ssladd  from './component/Ssladd'
+import Reduxget from './component/Reduxget'
 import './App.css'
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
     <Route path='/cloud/ssl/edit/:id' element={<CloudAccountEdit/>}/>
     <Route path='/databasecontroler' element={<DataBaseControler/>}/>
     <Route path='/databaseviewer' element={<DataBaseViewer/>}/>
+    <Route path='/reduxget' element={<Reduxget/>}/>
     <Route path='/ssl' element={<SSL/>}/>
     <Route path='/ssladd' element={<Ssladd/>}/>
     <Route path='/admin' element={<Admin/>}/>
