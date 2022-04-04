@@ -37,10 +37,10 @@ loadSslData()
         <>
         <tr>
           <th key={sslVal.id}>{sslVal.id}</th>
-          <th key={sslVal.id}>{sslVal.ssltype}</th>
-          <th key={sslVal.id}>{sslVal.domain}</th>
-          <th key={sslVal.id}>{sslVal.startdate}</th>
-          <th key={sslVal.id}>{sslVal.enddate}</th>
+          <th>{sslVal.ssltype}</th>
+          <th>{sslVal.domain}</th>
+          <th>{sslVal.startdate}</th>
+          <th>{sslVal.enddate}</th>
           <th>
             <NavLink to="/" className="btn btn-primary me-2">Edit</NavLink>
             <NavLink to="/ssl" className="btn btn-danger" onClick={()=>{deleteSsl(sslVal.id)}}>Delete</NavLink>
