@@ -49,6 +49,9 @@ const Navbar = () => {
             <Menu.Item >
               <NavLink to="/ssladd"><span>SSL</span></NavLink>
             </Menu.Item>
+            <Menu.Item >
+              <NavLink to="/ipadd"><span>Add IP</span></NavLink>
+            </Menu.Item>
           </Menu.ItemGroup>
         </SubMenu>
       </Menu>

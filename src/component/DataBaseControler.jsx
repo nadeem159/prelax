@@ -6,8 +6,10 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 const DataBaseControler = () => {
     const [dbname,setDBname] = useState({
-        "os":"",
-        "host":"",
+         "type":"",
+         "host":"",
+         "port":"",
+         "dbname":"",
         "username":"",
         "password":"",
         "domain":""
@@ -27,28 +29,34 @@ const DataBaseControler = () => {
 
     const submitDB = async(e) => {
         e.preventDefault()
-        const dbreq = await axios.post("http://localhost:3001/dbdetails",dbname).then((dbreq)=>{setDBname(dbreq.data)})
+        const dbreq = await axios.post("http://localhost:3001/dbdetails",dbname).then((dbreq)=>{setDBname(dbreq.data)}).catch((error)=>{alert(error.massage)})
         navigate("/databaseviewer")
         console.log(dbreq)
     }
   return (
     <div className='container-fluid'>
-    <div className='main_div'>
-    <Row>
-        <Col span={12} className="d-flex justify-content-center">
-            <Image.PreviewGroup className="d-flex mt-5 align-content-center">
+    <div className='main_div mt-5'>
+    <Row className=''>
+        <div  className="d-flex align-content-center justify-content-center col col-6 align-content-center align-items-center justify-content-evenly">
+            <Image.PreviewGroup className="d-flex">
                 <Image src={mysql} alt="sql" width={200} height={100} />
                 <Image src={mongodb} alt="mogno" width={200} height={100} />
             </Image.PreviewGroup>
-        </Col>
-        <Col span={12} className="pt-2">
-
+        </div>
+        <div  className="col col-6">
             <form onSubmit={submitDB} >
-                <Form.Item label="OS Type" name="Enter Your OS Type">
-                <Input onChange={inputdb} name="os" value={dbname.os}/>
+                <Form.Item label="TYPE">
+
+                <Input onChange={inputdb} name="type" value={dbname.type} placeholder="sql or mongo"/>
                 </Form.Item>
                 <Form.Item label="HOST">
                 <Input onChange={inputdb} name="host" value={dbname.host} />
+                </Form.Item>
+                <Form.Item label="PORT">
+                <Input onChange={inputdb} name="port" value={dbname.port} />
+                </Form.Item>
+                <Form.Item label="DB NAME">
+                <Input onChange={inputdb} name="dbname" value={dbname.dbname} />
                 </Form.Item>
                 <Form.Item label="UserName">
                 <Input onChange={inputdb} name="username" value={dbname.username} />
@@ -61,7 +69,7 @@ const DataBaseControler = () => {
                 </Form.Item>
                 <button className='btn btn-primary' type='submit'>Submit </button>
             </form>
-        </Col>
+        </div>
     </Row>
     </div>
     </div>

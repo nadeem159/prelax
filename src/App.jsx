@@ -12,9 +12,9 @@ import DataBaseViewer from './component/DataBaseViewer'
 import SSL from './component/SSL'
 import  Ssladd  from './component/Ssladd'
 import Reduxget from './component/Reduxget'
-import './App.css'
+// import './App.css'
 import Login from './component/login/Login'
-
+import IPadd from './component/IPadd'
 const App = () => {
 
   return (
@@ -33,6 +33,7 @@ const App = () => {
     <Route path='/ssl' element={<SSL/>}/>
     <Route path='/ssladd' element={<Ssladd/>}/>
     <Route path='/admin' element={<Admin/>}/>
+    <Route path='/ipadd' element={<IPadd/>}/>
     </Routes>
     </div>
   )
